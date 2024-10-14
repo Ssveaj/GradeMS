@@ -1,10 +1,11 @@
 ﻿using Core.Models;
-using Core.Models.Response;
+using Core.Models.RequestModel;
+
 
 namespace Core.Interface.UseCases
 {
     public interface IGetStudentGradeUseCase
     {
-        public Task<Result<GetStudentGradeResponseModel>> ExecuteUseCaseAsync(int? studentId = null);
+        public Task<Result<List<GradeResponse>>> ExecuteUseCaseAsync(GetStudentGradeRequestModel requestModel);
     }
 }
